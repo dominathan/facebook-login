@@ -1,0 +1,8 @@
+use_frameworks!
+
+target "facebooklogin" do
+# Begin Podfile - /Users/nhall/projects/facebook-login/node_modules/nativescript-google-maps-sdk/platforms/ios/Podfile 
+ pod 'GoogleMaps' 
+ # End Podfile 
+
+end

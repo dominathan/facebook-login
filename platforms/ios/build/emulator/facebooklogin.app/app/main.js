@@ -1,12 +1,18 @@
 "use strict";
 // this import should be first in order to load some required settings (like globals and reflect-metadata)
 var platform_1 = require("nativescript-angular/platform");
+var facebook_1 = require("./config/facebook");
 var tnsOAuthModule = require('nativescript-oauth');
 var facebookInitOptions = {
-    clientId: '380261268977382',
-    clientSecret: 'ce77c8d1c9f691e25467dbb8a734d240',
-    scope: ['email']
+    clientId: facebook_1.FACEBOOK_CLIENT_ID,
+    clientSecret: facebook_1.FACEBOOK_CLIENT_SECRET,
+    scope: ['email', 'user_friends', 'public_profile']
 };
+var platform = require("platform");
+// before calling .boostrap
+if (platform.isIOS) {
+    GMSServices.provideAPIKey("AIzaSyC3jrMOTpL2mIKNzyQCdOtGC7hwD7xFLd8");
+}
 tnsOAuthModule.initFacebook(facebookInitOptions);
 var app_module_1 = require("./app.module");
 platform_1.platformNativeScriptDynamic().bootstrapModule(app_module_1.AppModule);
