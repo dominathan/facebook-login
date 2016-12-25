@@ -1,20 +1,13 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import {registerElement} from 'nativescript-angular/element-registry';
 
-registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
 @Component({
   moduleId: module.id,
   selector: 'home',
-  templateUrl: 'home.component.html'
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.css']
 })
 
 export class HomeComponent {
 
-   @ViewChild("MapView") mapView: ElementRef;
-
-   //Map events
-   onMapReady = (event) => {
-       console.log("Map Ready");
-   };
 }

@@ -5,10 +5,12 @@ import { Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MapComponent } from './map/map.component';
 
 const COMPONENTS: any[] = [
   HomeComponent,
-  LoginComponent
+  LoginComponent,
+  MapComponent
 ]
 
 export const routes: Routes = [
@@ -21,7 +23,8 @@ export const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     children: [
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'map', component: MapComponent }
     ]
   }
 ]

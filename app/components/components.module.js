@@ -4,9 +4,11 @@ var router_1 = require('nativescript-angular/router');
 var core_1 = require('@angular/core');
 var home_component_1 = require('./home/home.component');
 var login_component_1 = require('./login/login.component');
+var map_component_1 = require('./map/map.component');
 var COMPONENTS = [
     home_component_1.HomeComponent,
-    login_component_1.LoginComponent
+    login_component_1.LoginComponent,
+    map_component_1.MapComponent
 ];
 exports.routes = [
     {
@@ -18,7 +20,8 @@ exports.routes = [
         path: 'home',
         component: home_component_1.HomeComponent,
         children: [
-            { path: 'login', component: login_component_1.LoginComponent }
+            { path: 'login', component: login_component_1.LoginComponent },
+            { path: 'map', component: map_component_1.MapComponent }
         ]
     }
 ];
