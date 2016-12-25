@@ -1,7 +1,8 @@
 <StackLayout>
     <GridLayout rows="auto" columns="*,*">
-      <Label text="WE MADE IT HERE"></Label>
-      
+      <Label text="WE MADE IT HERE" row="0" col="*"></Label>
+      <Button text="Faceboook" (tap)="onLoginTap($event)" class="btn" row="1" col="1"></Button>
+
     </GridLayout>
     <StackLayout>
       <router-outlet></router-outlet>
